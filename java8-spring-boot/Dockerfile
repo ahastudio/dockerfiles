@@ -1,7 +1,7 @@
 FROM java:8-jdk
 
-WORKDIR /home/app
+WORKDIR /home/project
 
-ADD . /home/app
+ADD . /home/project
 
 EXPOSE 8080
