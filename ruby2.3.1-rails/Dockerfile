@@ -5,7 +5,9 @@ RUN apt-get update && \
     apt-get install -y nodejs && \
     rm -rf /var/lib/apt/lists/*
 
-RUN gem update --system && \
+RUN gem install rubygems-update --no-document && \
+    update_rubygems && \
+    gem update --system && \
     gem install bundler --no-document
 
 WORKDIR /tmp
