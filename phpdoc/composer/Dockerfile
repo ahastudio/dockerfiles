@@ -1,4 +1,4 @@
-FROM composer:1.8.2
+FROM composer:1.8.4
 
 RUN apk add --no-cache --virtual graphviz && \
     apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv
