@@ -1,4 +1,4 @@
-FROM python:3.5.2
+FROM python:3.7.2
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -12,10 +12,10 @@ ADD requirements.txt /tmp/requirements.txt
 
 RUN pip install -r requirements.txt
 
-WORKDIR /home/myapp
+WORKDIR /u/myapp
 
-ADD . /home/myapp
+ADD . /u/myapp
 
-CMD python app.py
+CMD flask run --host=0.0.0.0
 
 EXPOSE 5000
