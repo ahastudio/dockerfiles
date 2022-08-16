@@ -4,8 +4,11 @@ ENTRYPOINT []
 
 CMD geth \
     --networkid 1234 \
-    --rpc --rpcaddr "0.0.0.0" \
-    --rpcapi "eth,net,web3,admin,personal" \
-    --rpccorsdomain "*" \
+    --http \
+    --http.addr "0.0.0.0" \
+    --http.api "eth,net,web3,admin,personal" \
+    --http.corsdomain "*" \
     --nodiscover \
-    --mine
+    --mine \
+    --miner.threads=1 \
+    --miner.etherbase="$MINER_ADDRESS"
