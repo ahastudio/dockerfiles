@@ -1,5 +1,7 @@
 # Java + Spring Boot
 
+Java 17과 Spring Boot 3.2.5 기준.
+
 ## `getDeps` 태스크 추가
 
 ```kts
